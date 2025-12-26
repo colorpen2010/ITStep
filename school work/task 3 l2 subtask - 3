@@ -1,0 +1,5 @@
+width = int(input("ведите ширину: "))
+height = int(input("ведите высоту: "))
+
+area = width * height
+print(area)
