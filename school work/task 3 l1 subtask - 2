@@ -1,5 +1,0 @@
-value = int(input('ведите число: '))
-percent = int(input('ведите процент: '))
-
-result = value * percent / 100
-print(result)

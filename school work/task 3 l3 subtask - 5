@@ -1,4 +1,0 @@
-meters = int(input("ведите число: "))
-
-centimeters = meters * 100
-print(centimeters)

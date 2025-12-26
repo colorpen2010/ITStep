@@ -1,6 +1,0 @@
-a = int(input("ведите число: "))
-b = int(input("ведите число: "))
-
-print(a + b)   # сума
-print(a - b)   # різниця
-print(a * b)   # добуток
