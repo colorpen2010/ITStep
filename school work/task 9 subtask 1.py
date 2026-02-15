@@ -1,13 +1,10 @@
-nums = list(
-    map(int, input("Введите числа через пробел: ").split())
-)
-# split() — разбивает строку на части по пробелам  
-# map(int, ...) — превращает каждую часть в число  
-# list(...) — делает из результата список
+nums_str = input("Введите числа через пробел: ").split()
+
+nums = []
+for n in nums_str:
+    nums.append(int(n))
 
 s = sum(nums)
-# sum(...) — складывает все числа в списке
-
 avg = s / len(nums)
 
 print("Сума:", s)

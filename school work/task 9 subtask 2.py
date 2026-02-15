@@ -1,11 +1,11 @@
-nums = list(map(int, input("Введите числа: ").split()))
-# split() — разбивает строку на части по пробелам  
-# map(int, ...) — превращает каждую часть в число  
-# list(...) — собирает всё в список
+nums_str = input("Введите числа: ").split()
+
+nums = []
+for n in nums_str:
+    nums.append(int(n))
 
 x = int(input("Какое число искать: "))
 
 count = nums.count(x)
-# count(x) — считает сколько раз число x встречается в списке
 
 print("Количество:", count)
