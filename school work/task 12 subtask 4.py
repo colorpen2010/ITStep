@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import turtle
 import random
 
@@ -16,3 +17,28 @@ for i in range(36):
     t.right(10)
 
 turtle.done()
+=======
+try:
+    txt = input("Введите оценки через пробел: ")
+
+    parts = txt.split()
+
+    nums = []
+
+    for p in parts:
+        nums.append(int(p))
+
+    s = sum(nums)
+    avg = s / len(nums)
+
+    print("Средняя оценка:", avg)
+
+except ValueError:
+    print("Ошибка! Оценки должны быть числами.")
+
+except ZeroDivisionError:
+    print("Список оценок пуст.")
+
+finally:
+    print("Завершение вычислений")
+>>>>>>> 2226caf6316ffe7490d1cf1bb04573a39cf9e0ff

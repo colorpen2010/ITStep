@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import turtle
 
 t = turtle.Turtle()
@@ -31,3 +32,24 @@ t.forward(150)
 t.end_fill()
 
 turtle.done()
+=======
+try:
+    usd = float(input("Введите сумму в долларах: "))
+    rate = float(input("Введите курс евро: "))
+
+    if rate == 0:
+        raise Exception("Курс обмена не может быть нулем")
+
+    eur = usd / rate
+
+    print("Сумма в евро:", eur)
+
+except ValueError:
+    print("Ошибка ввода! Нужно вводить числа.")
+
+except Exception as e:
+    print("Ошибка:", e)
+
+finally:
+    print("Операция завершена")
+>>>>>>> 2226caf6316ffe7490d1cf1bb04573a39cf9e0ff

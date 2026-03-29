@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import turtle
 
 t = turtle.Turtle()
@@ -31,3 +32,15 @@ for i in range(5):
     t.left(72)
 
 turtle.done()
+=======
+try:
+    prc = float(input("Введите цену товара: "))
+    disc = float(input("Введите процент скидки: "))
+
+    final_prc = prc - (prc * disc / 100)
+
+    print("Финальная цена:", final_prc)
+
+except ValueError:
+    print("Ошибка ввода! Нужно вводить числа.")
+>>>>>>> 2226caf6316ffe7490d1cf1bb04573a39cf9e0ff

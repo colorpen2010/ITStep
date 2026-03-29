@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import turtle as t
 from turtle_config import *
 
@@ -38,3 +39,62 @@ screen.onclick(lambda x, y: t.goto(x, y))
 screen.listen()
 
 t.done()
+=======
+num1 = float(input('Enter first number: '))
+num2 = float(input('Enter second number: '))
+action = input('Enter operation(+, -, *, /): ')
+
+match action:
+    case '+': print(f'{num1} + {num2} = {num1 + num2}')
+    case '-': print(f'{num1} - {num2} = {num1 - num2}')
+    case '*': print(f'{num1} * {num2} = {num1 * num2}')
+    case '/': print(f'{num1} / {num2} = {num1 / num2}')
+
+try:
+    num1 = float(input('Enter first number: '))
+    num2 = float(input('Enter second number: '))
+    action = input('Enter operation(+, -, *, /): ')
+
+    match action:
+        case '+': print(f'{num1} + {num2} = {num1 + num2}')
+        case '-': print(f'{num1} - {num2} = {num1 - num2}')
+        case '*': print(f'{num1} * {num2} = {num1 * num2}')
+        case '/': print(f'{num1} / {num2} = {num1 / num2}')
+except:
+    print('Incorrect number!')
+
+try:
+    num1 = float(input('Enter first number: '))
+    num2 = float(input('Enter second number: '))
+    action = input('Enter operation(+, -, *, /): ')
+
+    match action:
+        case '+': print(f'{num1} + {num2} = {num1 + num2}')
+        case '-': print(f'{num1} - {num2} = {num1 - num2}')
+        case '*': print(f'{num1} * {num2} = {num1 * num2}')
+        case '/': print(f'{num1} / {num2} = {num1 / num2}')
+except ValueError:
+    print('Incorrect number!')
+except ZeroDivisionError:
+    print("Can't divide by zero!")
+
+while True:
+    try:
+        num1 = float(input('Enter first number: '))
+        num2 = float(input('Enter second number: '))
+        action = input('Enter operation(+, -, *, /): ')
+
+        match action:
+            case '+': print(f'{num1} + {num2} = {num1 + num2}')
+            case '-': print(f'{num1} - {num2} = {num1 - num2}')
+            case '*': print(f'{num1} * {num2} = {num1 * num2}')
+            case '/': print(f'{num1} / {num2} = {num1 / num2}')
+    except ValueError:
+        print('Incorrect number!')
+    except ZeroDivisionError:
+        print("Can't divide by zero!")
+    finally:
+        reapeat = input('Do you want to repeat? Y/N ')
+        if reapeat.lower() == 'n':
+            break
+>>>>>>> 2226caf6316ffe7490d1cf1bb04573a39cf9e0ff
