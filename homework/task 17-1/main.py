@@ -1,30 +1,35 @@
-from students import Student
-from car import Car
+from student import *
+from car import *
 
-student = Student("Іван", "Петров", 20)
-car = Car("Toyota", "Camry", 180, 2020)
+student = Student('Ivan', 'Petrov', 18)
+car = Car('BMW', 'M5', 250, 2020)
 
 while True:
-    print("\n1 - Показати студента")
-    print("2 - Додати оцінку")
-    print("3 - Показати оцінки")
-    print("4 - Показати авто")
-    print("0 - Вихід")
+    print('\n1 - Student')
+    print('2 - Car')
+    print('0 - Exit')
 
-    choice = input("Вибір: ")
+    choice = input('Choose: ')
 
-    if choice == "1":
-        print(student)
+    if choice == '1':
+        print('\n1 - Show student')
+        print('2 - Add grade')
+        print('3 - Show grades')
 
-    elif choice == "2":
-        grade = int(input("Введіть оцінку: "))
-        student.add_grade(grade)
+        s = input('Choose: ')
 
-    elif choice == "3":
-        student.show_grades()
+        if s == '1':
+            print(student)
 
-    elif choice == "4":
+        elif s == '2':
+            grade = int(input('Enter grade: '))
+            student.add_grade(grade)
+
+        elif s == '3':
+            student.show_grades()
+
+    elif choice == '2':
         car.show_info()
 
-    elif choice == "0":
+    elif choice == '0':
         break

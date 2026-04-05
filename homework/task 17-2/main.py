@@ -1,33 +1,37 @@
-from figures import Circle, Rectangle, Triangle
+from shapes import *
 
 while True:
-    print("\n1 - Коло")
-    print("2 - Прямокутник")
-    print("3 - Трикутник")
-    print("0 - Вихід")
+    print('\n1 - Circle')
+    print('2 - Rectangle')
+    print('3 - Triangle')
+    print('0 - Exit')
 
-    choice = input("Вибір: ")
+    choice = input('Choose: ')
 
-    if choice == "1":
-        r = float(input("Радіус: "))
-        c = Circle(r)
-        print("Площа:", c.area())
-        print("Периметр:", c.perimetr())
+    if choice == '1':
+        r = float(input('Radius: '))
+        circle = Circle(r)
 
-    elif choice == "2":
-        a = float(input("Сторона 1: "))
-        b = float(input("Сторона 2: "))
-        r = Rectangle(a, b)
-        print("Площа:", r.area())
-        print("Периметр:", r.perimetr())
+        print('Area:', circle.area())
+        print('Perimeter:', circle.perimetr())
 
-    elif choice == "3":
-        a = float(input("Сторона 1: "))
-        b = float(input("Сторона 2: "))
-        c = float(input("Сторона 3: "))
-        t = Triangle(a, b, c)
-        print("Площа:", t.area())
-        print("Периметр:", t.perimetr())
+    elif choice == '2':
+        w = float(input('Width: '))
+        h = float(input('Height: '))
+        rect = Rectangle(w, h)
 
-    elif choice == "0":
+        print('Area:', rect.area())
+        print('Perimeter:', rect.perimetr())
+
+    elif choice == '3':
+        a = float(input('Side a: '))
+        b = float(input('Side b: '))
+        c = float(input('Side c: '))
+
+        tri = Triangle(a, b, c)
+
+        print('Area:', tri.area())
+        print('Perimeter:', tri.perimetr())
+
+    elif choice == '0':
         break

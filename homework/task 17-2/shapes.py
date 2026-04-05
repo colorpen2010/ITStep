@@ -1,5 +1,6 @@
 import math
 
+
 class Circle:
     def __init__(self, radius):
         self.radius = radius
@@ -12,15 +13,15 @@ class Circle:
 
 
 class Rectangle:
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
     def area(self):
-        return self.a * self.b
+        return self.width * self.height
 
     def perimetr(self):
-        return 2 * (self.a + self.b)
+        return 2 * (self.width + self.height)
 
 
 class Triangle:
@@ -29,9 +30,9 @@ class Triangle:
         self.b = b
         self.c = c
 
-    def area(self):
-        p = (self.a + self.b + self.c) / 2
-        return math.sqrt(p * (p - self.a) * (p - self.b) * (p - self.c))
-
     def perimetr(self):
         return self.a + self.b + self.c
+
+    def area(self):
+        p = self.perimetr() / 2
+        return (p * (p - self.a) * (p - self.b) * (p - self.c)) ** 0.5
