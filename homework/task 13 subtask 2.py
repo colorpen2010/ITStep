@@ -1,14 +1,29 @@
-def gcd(a, b):
+import turtle
 
-    if b == 0:
-        return a
+t = turtle.Turtle()
 
-    return gcd(b, a % b)
+t.speed(3)
 
+t.color('black')
+t.begin_fill()
+for i in range(4):
+    t.forward(100)
+    t.right(90)
+t.end_fill()
 
-a = int(input("Введите первое число: "))
-b = int(input("Введите второе число: "))
+t.color('red')
 
-res = gcd(a, b)
+t.begin_fill()
 
-print("НОД чисел:", res)
+t.left(60)
+t.forward(100)
+
+t.right(120)
+t.forward(100)
+
+t.right(120)
+t.forward(100)
+
+t.end_fill()
+
+turtle.done()

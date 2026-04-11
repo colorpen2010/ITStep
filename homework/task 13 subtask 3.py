@@ -1,17 +1,22 @@
-def sym_list(lst):
+import turtle
+import random
 
-    if len(lst) <= 1:
-        return True
+t = turtle.Turtle()
 
-    if lst[0] != lst[-1]:
-        return False
+t.speed(0)
 
-    return sym_list(lst[1:-1])
+colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange']
 
 
-lst = [1, 2, 3, 2, 1]
+for i in range(36):
 
-if sym_list(lst):
-    print("Список симметричный")
-else:
-    print("Список не симметричный")
+    t.color(random.choice(colors))
+
+    for j in range(4):
+        t.forward(100)
+        t.right(90)
+
+    t.right(10)
+
+
+turtle.done()
